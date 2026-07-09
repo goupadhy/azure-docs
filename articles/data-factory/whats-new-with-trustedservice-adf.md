@@ -22,7 +22,7 @@ Azure Data Factory provides a **Trusted service** setting under **Factory settin
 - **Legacy**: Uses the existing trusted services mechanism, which enables Data Factory to access Azure Storage accounts and Azure Key Vault through managed identities combined with firewall exceptions.
 - **Modern**: Uses an enhanced security model designed to provide stronger protection against unauthorized access while meeting current security and compliance requirements.
 
-:::image type="content" source="..\media\data-factory-service-identity\modern-ts.png" alt-text="Screenshot that shows the Modern trusted service option in Data Factory factory settings.":::
+:::image type="content" source="../media/data-factory-service-identity/modern-ts.png" alt-text="Screenshot that shows the Modern trusted service option in Data Factory factory settings.":::
 
 > [!NOTE]
 > The **Modern** option is the recommended setting. It helps prevent unauthorized access and meet updated security standards. It might require firewall or network changes for connections that currently rely on trusted services, such as SHIR, Azure-SSIS integration runtime with storage access, REST to Storage, and REST to Key Vault.
