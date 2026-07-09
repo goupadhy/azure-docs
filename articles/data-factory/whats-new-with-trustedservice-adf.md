@@ -22,7 +22,7 @@ Azure Data Factory provides a **Trusted service** setting under **Factory settin
 - **Legacy**: Uses the existing trusted services mechanism, which enables Data Factory to access Azure Storage accounts and Azure Key Vault through managed identities combined with firewall exceptions.
 - **Modern**: Uses an enhanced security model designed to provide stronger protection against unauthorized access while meeting current security and compliance requirements.
 
-:::image type="content" source="../media/data-factory-service-identity/modern-ts.png" alt-text="Screenshot that shows the Modern trusted service option in Data Factory factory settings.":::
+:::image type="content" source="./articles/datafactory/media/data-factory-service-identity/modern-ts.png" alt-text="Screenshot that shows the Modern trusted service option in Data Factory factory settings.":::
 
 > [!NOTE]
 > The **Modern** option is the recommended setting. It helps prevent unauthorized access and meet updated security standards. It might require firewall or network changes for connections that currently rely on trusted services, such as SHIR, Azure-SSIS integration runtime with storage access, REST to Storage, and REST to Key Vault.
@@ -63,24 +63,25 @@ If you don't transition to **Modern** trusted service or one of the supported ne
 
 Use IP allow-listing when your SHIR or Azure-SSIS integration runtime uses stable outbound public IP addresses. This option enables you to add the IP address of your SHIR or Azure-SSIS integration runtime to the firewall rules for the target Azure Storage account or Azure Key Vault.
 
-For more information, see [grant access from an internet IP range for Azure Storage](https://learn.microsoft.com/azure/storage/common/storage-network-security-overview?tabs=azure-portal#firewall-rules) and [Azure Key Vault network security](https://learn.microsoft.com/azure/key-vault/general/network-security?tabs=azure-portal).
+For more information, see [grant access from an internet IP range for Azure Storage](../storage/common/storage-network-security-overview.md?tabs=azure-portal#firewall-rules) and [Azure Key Vault network security](../storage/common/storage-network-security-overview.md).
 
 ### Managed virtual network
 
 Use a Data Factory managed virtual network when you want Azure Data Factory to manage the integration runtime network boundary and access Azure Storage accounts or Azure Key Vault by using private endpoints from Azure integration runtime.
 
-For more information, see [Managed virtual networks and managed private endpoints in Azure Data Factory](https://learn.microsoft.com/azure/data-factory/managed-virtual-network-private-endpoint).
+For more information, see [Managed virtual networks and managed private endpoints in Azure Data Factory](../data-factory/managed-virtual-network-private-endpoint.md).
 
 ### Customer-owned virtual network
 
 Use a customer-owned virtual network when your organization manages networking directly or when Azure-SSIS integration runtime must join your own virtual network. This option allows access to Azure Storage accounts and Azure Key Vault through a virtual network service endpoint or private endpoint.
 
-For more information, see [Join an Azure-SSIS integration runtime to a virtual network](https://learn.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+For more information, see [Join an Azure-SSIS integration runtime to a virtual network](../data-factory/join-azure-ssis-integration-runtime-virtual-network.md).
+
 
 ## Related content
 
-- [Azure Storage network security](https://learn.microsoft.com/azure/storage/common/storage-network-security-overview)
-- [Azure Key Vault network security](https://learn.microsoft.com/azure/key-vault/general/network-security?tabs=azure-portal)
-- [Grant access to trusted Azure services for Azure Key Vault](https://learn.microsoft.com/azure/key-vault/general/overview-vnet-service-endpoints)
-- [Managed virtual networks and managed private endpoints in Azure Data Factory](https://learn.microsoft.com/azure/data-factory/managed-virtual-network-private-endpoint)
-- [Join an Azure-SSIS integration runtime to a virtual network](https://learn.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)
+- [Azure Storage network security](../storage/common/storage-network-security-overview.md)
+- [Azure Key Vault network security](../storage/common/storage-network-security-overview.md)
+- [Grant access to trusted Azure services for Azure Key Vault](../storage/common/storage-network-security-overview.md)
+- [Managed virtual networks and managed private endpoints in Azure Data Factory](../data-factory/managed-virtual-network-private-endpoint.md)
+- [Join an Azure-SSIS integration runtime to a virtual network](../data-factory/join-azure-ssis-integration-runtime-virtual-network.md)
