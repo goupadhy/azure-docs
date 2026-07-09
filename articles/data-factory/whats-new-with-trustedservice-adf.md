@@ -47,8 +47,8 @@ The following configurations rely on the legacy trusted service model. Review yo
 | Data Factory self-hosted integration runtime (SHIR) | System-assigned managed identity | Azure Storage | Trusted access based on a managed identity |
 | Azure-SSIS integration runtime through Azure Storage Connection Manager | System-assigned managed identity | Azure Storage | Trusted access based on a managed identity |
 | Data Factory SHIR as a proxy for Azure-SSIS integration runtime | System-assigned managed identity | Azure Storage | Trusted access based on a managed identity |
-| REST linked service or or Web activity | System-assigned managed identity | Azure Storage | Trusted access based on a managed identity |
-| REST linked service or or Web activity | System-assigned or user-assigned managed identity | Azure Key Vault | Trusted Azure services firewall exception |
+| REST linked service or Web activity | System-assigned managed identity | Azure Storage | Trusted access based on a managed identity |
+| REST linked service or Web activity | System-assigned or user-assigned managed identity | Azure Key Vault | Trusted Azure services firewall exception |
 
 ## Supported access patterns
 
