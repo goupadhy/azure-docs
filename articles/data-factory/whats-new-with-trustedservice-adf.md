@@ -1,7 +1,7 @@
 ---
 title: What's new with trusted service in Azure Data Factory
 description: Learn about the modern trusted service capability in Azure Data Factory and the retirement of legacy trusted services access.
-ms.author: goupadhyy
+ms.author: goupadhy
 author: goupadhy
 ms.subservice: integration-runtime
 ms.topic: concept-article
